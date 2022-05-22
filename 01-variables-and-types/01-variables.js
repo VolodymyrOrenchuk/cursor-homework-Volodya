@@ -21,7 +21,7 @@ const roundPriceHundred = (Math.round(minimalRoundPrice / 100) * 100)
 console.log(`Сума товарів заокруглена до сотень: ${roundPriceHundred}`);
 
 // // Виведіть булеве значення: чи є сума всіх товарів (округлена в меншу сторону) парним чи непарним числом?
-if (minimalRoundPrice % 2 == 0) {
+if (minimalRoundPrice % 2 === 0) {
   console.log(true); 
 } else {
   console.log(false); 
@@ -54,4 +54,4 @@ const profit = (sumFruits - discountInParsantege).toFixed(2) / 2
 console.log(`Чистий прибуток: ${profit}`);
 
 // // Створіть шаблонний рядок та виведіть всі обчислення :
-console.log(`Максимальна ціна: ${maxPrice}, Мінамальна ціна: ${minPrice}, Варстість всіх товарів: ${sumFruits}, Округлена в меншу сторону вартість: ${minimalRoundPrice}, Сума товарів заокруглена до сотень: ${roundPriceHundred}, Решта: ${rest}, Середнє значення цін: ${averageSum}, Знижка: ${discountInParsantege}, Ціна зі знижкою: ${priceWithDiscount},  Чистий прибуток: ${profit}. `);
+document.write(`Максимальна ціна: ${maxPrice}, Мінамальна ціна: ${minPrice}, Варстість всіх товарів: ${sumFruits}, Округлена в меншу сторону вартість: ${minimalRoundPrice}, Сума товарів заокруглена до сотень: ${roundPriceHundred}, Решта: ${rest}, Середнє значення цін: ${averageSum}, Знижка: ${discountInParsantege}, Ціна зі знижкою: ${priceWithDiscount},  Чистий прибуток: ${profit}. `);
