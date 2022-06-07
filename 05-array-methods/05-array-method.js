@@ -6,14 +6,21 @@ console.log(getRandomArray(10,10,1));
 
 //2 мода
 
-function getModa(...arr){
-    return  arr.filter (value => Number.isInteger(value)).sort((a,b) =>
-        arr.filter(move => move===a).length - arr.filter(move => move===b).length).pop();
-}
-console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
+// function getModa(...arr){
+//     return  arr.filter (value => Number.isInteger(value)).sort((a,b) =>
+//         arr.filter(move => move===a).length - arr.filter(move => move===b).length).pop();
+// }
+// console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
+
+const getMode = (...arr) =>
+  arr.reduce(
+    (a,b,i,arr)=>
+     (arr.filter(el=>el===a).length >= arr.filter(el=>el===b).length ? a : b),
+    null)
+console.log( getMode(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
+
 
 //3 середнє арифметичне
-
 
 const getAvarage = (...arr) => {
     const newArr = arr.filter(value => Number.isInteger(value) )
@@ -50,14 +57,14 @@ console.log(median(1,2,3,4));
 //5 фільтр парних чисел
 
 const filterEvenNumbers = (...arr) => {
-    return newArr = arr.filter(value => value % 2 !== 0)
+    return arr.filter(value => value % 2 !== 0)
 }
 console.log(filterEvenNumbers(1,2,3,4,5,6));
 
 // 6 числа більші нуля
 
 function countPositiveByFive(...arr) {
-    const  newArr = arr.filter((value, index) => value > 0)
+    const  newArr = arr.filter(value => value > 0)
      return newArr.length
 }
 console.log(countPositiveByFive(1, -2, 3, -4, -5, 6));
@@ -83,13 +90,8 @@ console.log(replaceBadWords('Are you fucking   kidding me,bullshit?'));
 //9 кожне слова на скади по 3 буви
 
 function devideByThree(str) {
-    
-    let arr = [];
-  while(str !== '') {
-    arr.push(str.toLowerCase().substring(0, 3));
-    str = str.substring(3).split(' ').join('')
-  }
-  return arr;
-}
-console.log(devideByThree('Commander'));
+    return str.trim().split(' ').join('').toLowerCase().match(/.{1,3}/g)
+ }
+console.log(devideByThree('    Comma  nde  r  '));
+
 
