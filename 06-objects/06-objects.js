@@ -42,16 +42,16 @@ let sum = 0;
 for (let number of combinedArr) {
   sum += number;
   }
-average = (sum / combinedArr.length).toFixed(2);
+const average = (sum / combinedArr.length).toFixed(2);
 return average
 }
 console.log(getAverageMark(students[0])); 
 // // 3
 const getStudentInfo = (student) => {
   let userInfo = {
-    'name': student.name,
-      'course': student.course,
-        'averageMark': getAverageMark(student)
+    name: student.name,
+      course: student.course,
+        averageMark: getAverageMark(student)
   }
   return userInfo
 }
@@ -67,7 +67,7 @@ console.log(getStudentsName(students));
 
 //5
 const getBestStudent = students => {
-  return [getStudentInfo(students[0]), getStudentInfo(students[1]), getStudentInfo(students[2])].sort((a, b) => b.averageMark - a.averageMark).shift().name;
+  return students.map(studik => getStudentInfo(studik)).sort((a, b) => b.averageMark - a.averageMark).shift().name
  
 }
 console.log(getBestStudent(students))
