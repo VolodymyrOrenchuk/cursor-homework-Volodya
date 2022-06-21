@@ -1,0 +1,47 @@
+:root {
+  --primary-transition: all;
+}
+html {
+  font-size: 10px;
+  background: url("./images/vad706_hero.jpg");
+  background-size: cover;
+}
+
+.keys {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: 0.4rem solid rgba(0, 0, 0, 0.24);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.09s;
+  width: 10rem;
+  text-align: center;
+  color: rgb(240, 238, 237);
+  background: rgba(176, 173, 173, 0.3);
+}
+.key:active,
+.playing {
+  transform: scale(1.5);
+  border-color: #f7dc7a;
+  box-shadow: 0 0 1rem #de5702;
+  transition: let(--primary transition);
+}
+
+kbd {
+  display: block;
+  font-size: 5rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #e0d313;
+}
