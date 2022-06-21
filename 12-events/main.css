@@ -45,3 +45,52 @@ kbd {
   letter-spacing: 0.1rem;
   color: #e0d313;
 }
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 7px;
+  }
+    .keys {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .keys {
+    display: flex;
+    flex-direction: column;
+  }
+  html{
+    font-size: 6px;
+  }
+}
