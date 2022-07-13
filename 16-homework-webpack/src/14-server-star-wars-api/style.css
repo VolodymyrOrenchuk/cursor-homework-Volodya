@@ -1,0 +1,82 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background: url(https://itc.ua/wp-content/uploads/2018/02/star-wars-logo-new-tall.jpg)
+    center fixed;
+}
+nav {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-items {
+  color: aqua;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#ctn-main {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#ctn-planets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  border-radius: 15px;
+  background-color: rgb(35, 117, 226);
+  padding: 5px;
+  margin: 15px;
+}
+.card-planets {
+  border: 5px solid rgb(12, 243, 139);
+}
+
+.overlay {
+  background: url(https://itc.ua/wp-content/uploads/2019/12/star_wars_the_rise_of_skywalker_i00.jpg)
+    no-repeat center fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(6, 16, 73);
+  position: absolute;
+  color: yellow;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.overlay.active {
+  display: flex;
+  cursor: wait;
+}
+.card-people {
+  border: 5px solid rgb(86, 224, 7);
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: x-large;
+  }
+  nav {
+    height: 130px;
+  }
+
+  button {
+    height: 20px;
+  }
+}
